@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="build/css/vendor.css">
-    <link rel="stylesheet" href="build/css/styles.css">
-    <script src="build/js/vendor.min.js"></script>
-    <script src="build/js/app.js"></script>
-    <title></title>
-  </head>
-  <body>
-  </body>
-</html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="build/css/vendor.css">
+  <link rel="stylesheet" href="build/css/styles.css">
+  <script src="build/js/vendor.min.js"></script>
+  <script src="build/js/app.js"></script>
+  <title>Doctor Lookup API</title>
+</head>
+<body>
+  <div class = "container">
+    <div class ="jumbotron">
+      <h1>Doctor Lookup API</h1>
+    </div>
+        <h2>Find doctors in the Portland area best qualified to treat you!</h2>
+        <form id="findDoc">
+          <label for="medicalIssue">Please Enter your Medical Issue:</label>
+          <input id="medicalIssue" type="text">
+          <button type="submit">Submit</button>
+        </form>
+        <h3 id="recommend">Based on your input we recommend the following doctors:</h3>
+        <br>
+      </div>
+      <ul class="showDoctors">
 
+      </ul>
+    </div>
+  </body>
+  </html>
