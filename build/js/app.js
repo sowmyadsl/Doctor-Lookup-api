@@ -8,19 +8,20 @@ function Doctor(medicalIssue) {
   this.medicalIssue = medicalIssue;
 }
 
-Doctor.prototype.getDoctors = function(medicalIssue,row, displayFirstName, displayLastName, displayTitle, displayBio) {
+Doctor.prototype.getDoctors = function(medicalIssue,row, displayDocName, displayTitle, displaySpeciality, displayPracticeName,displayaddress) {
   $.get('https://api.betterdoctor.com/2016-03-01/doctors?query='+ medicalIssue+'&location=45.5231%2C-122.6765%2C%205&user_location=45.5231%2C-122.6765&skip=0&limit=20&user_key=' + apiKey)
   .then(function(result) {
-    result.data.forEach(function(data) {
+    (result.data.forEach(function(data) {
       row();
-      displayFirstName(data.profile.first_name);
-      displayLastName(data.profile.last_name);
+      var docName = data.profile.first_name + " " + data.profile.last_name;
+      displayDocName(docName);
       displayTitle(data.profile.title);
-      displayBio(data.profile.specialities.description);
-
-      // $('.showDoctors').append("<li>" + data.profile.first_name + " " + data.profile.middle_name + " " + data.profile.last_name + " " + data.profile.title + " " + data.profile.bio + "</li>");
+      displaySpeciality(data.specialties[0].description);
+      displayPracticeName(data.practices[0].name);
+      var practiceAddress = data.practices[0].visit_address.street + " " + data.practices[0].visit_address.street2 + " " +  data.practices[0].visit_address.zip;
+      displayaddress(practiceAddress);
       console.log(result);
-    });
+    }));
   })
   .fail(function(error){
     $('.showDoctors').text(error.responseJSON.message);
@@ -36,20 +37,24 @@ var row = function() {
   $('#table-body').append(`<tr></tr>`);
 };
 
-var displayFirstName = function(first_name){
-  $('tr').last().append(`<td>${first_name}</td>`);
-};
-
-var displayLastName = function(last_name){
-  $('tr').last().append(`<td>${last_name}</td>`);
+var displayDocName = function(doc_name){
+  $('tr').last().append(`<td>${doc_name}</td>`);
 };
 
 var displayTitle = function(title){
   $('tr').last().append(`<td>${title}</td>`);
 };
 
-var displayBio = function(bio){
-  $('tr').last().append(`<td>"${bio}"</td>`);
+var displaySpeciality = function(specialty){
+  $('tr').last().append(`<td>${specialty}</td>`);
+};
+
+var displayPracticeName = function(practice_name){
+  $('tr').last().append(`<td>"${practice_name}"</td>`);
+}
+
+var displayaddress = function(address){
+  $('tr').last().append(`<td>"${address}"</td>`);
 };
 
 
@@ -61,7 +66,7 @@ $(document).ready(function(){
     e.preventDefault();
 
     var medicalIssue = $('#medicalIssue').val();
-    currentDoctorObject.getDoctors(medicalIssue,row, displayFirstName, displayLastName, displayTitle, displayBio);
+    currentDoctorObject.getDoctors(medicalIssue,row, displayDocName, displayTitle, displaySpeciality, displayPracticeName,displayaddress);
   });
 });
 

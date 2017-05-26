@@ -16,7 +16,7 @@
         <h2>Find doctors in the Portland area best qualified to treat you!</h2>
         <form id="findDoc">
           <label for="medicalIssue">Please Enter your Medical Issue:</label>
-          <input id="medicalIssue" type="text" required>
+          <input id="medicalIssue" type="text">
           <button type="submit">Submit</button>
         </form>
         <h3 id="recommend">Based on your input we recommend the following doctors:</h3>
@@ -25,10 +25,11 @@
       <table class="table">
         <thead>
           <tr>
-            <th>FirstName</th>
-            <th>LastName</th>
+            <th>Doctor Name</th>
             <th>Title</th>
-            <th>Bio</th>
+            <th>Specialty</th>
+            <th>Practice Name</th>
+            <th>Address</th>
           </tr>
         </thead>
         <tbody id="table-body">
