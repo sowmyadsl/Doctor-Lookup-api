@@ -61,7 +61,9 @@ var displayaddress = function(address){
 $(document).ready(function(){
   var currentDoctorObject = new Doctor();
   $(".table").hide();
+  $("#recommend").hide();
   $("#findDoc").submit(function(e){
+    $("#recommend").show();
     $(".table").show();
     e.preventDefault();
 

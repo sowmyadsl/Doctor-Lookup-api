@@ -9,23 +9,27 @@
   <title>Doctor Lookup API</title>
 </head>
 <body>
-  <div class = "container">
+
     <div class ="jumbotron">
       <h1>Doctor Lookup API</h1>
     </div>
-        <h2>Find doctors in the Portland area best qualified to treat you!</h2>
+    <div class = "container">
+      <div class = "row">
+        <div class = "col-md-4">
+        <h2>Find doctors in the Portland area to treat you!</h2>
         <form id="findDoc">
           <label for="medicalIssue">Please Enter your Medical Issue:</label>
           <input id="medicalIssue" type="text">
           <button type="submit">Submit</button>
         </form>
+      </div>
+      <div class = "col-md-8">
         <h3 id="recommend">Based on your input we recommend the following doctors:</h3>
         <br>
-      </div>
       <table class="table">
         <thead>
           <tr>
-            <th>Doctor Name</th>
+            <th>Name</th>
             <th>Title</th>
             <th>Specialty</th>
             <th>Practice Name</th>
@@ -36,6 +40,8 @@
           <tr>
         </tbody>
       </table>
+    </div>
+    </div>
     </div>
   </body>
   </html>
