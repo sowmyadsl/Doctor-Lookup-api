@@ -6,6 +6,7 @@
     "sowmyadsl <sowmya.dsl@gmail.com>"
   ],
   "license": "ISC",
+  "moduleType": [],
   "homepage": "",
   "ignore": [
     "**/.*",

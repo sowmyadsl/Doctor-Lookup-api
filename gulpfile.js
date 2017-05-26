@@ -43,6 +43,13 @@ gulp.task('bowerBuild', ['bower'], function(){
   browserSync.reload();
 });
 
+gulp.task('jsBrowserify', function() {
+  return browserify({ entries: ['./js/doctor-lookup-interface.js'] })
+    .bundle()
+    .pipe(source('app.js'))
+    .pipe(gulp.dest('./build/js'));
+});
+
 gulp.task("clean", function(){
   return del(['build', 'tmp']);
 });
@@ -113,5 +120,3 @@ gulp.task('cssBuild', function() {
     .pipe(gulp.dest('./build/css'))
     .pipe(browserSync.stream());
 });
-
-
