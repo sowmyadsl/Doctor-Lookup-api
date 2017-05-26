@@ -1,19 +1,41 @@
-# README title
-This is a brief description of what the software does.
-### Setup/Installation Requirements
-* list item 1
-* list item 2
-* list item 3
+# Doctor Lookup Project
+
+#### _May 26th, 2017_
+
+#### By _**Sowmya Dinavahi**_
+
+### Overview
+
+This is a website which on frontend lets the user input a medical issue and retrieve information and data from database API which contains a list of specialities and doctors. This site allows the user to find the doctors nearby to the location user is searching from.
+
+## Specifications
+
+| behavior |  input   |  output  |
+|----------|:--------:|:--------:|
+|Program allows the user enter a medical issue and click on submit button  | "Pregnancy" | *List of doctors specializing on pregnancy* |
+
 ### Known Bugs
-List known bugs or issues here
+
+No bugs as of now.
+
 ### Technologies Used
-* Tech 1
-* Tech 2
-* Tech 3
-### By Authors
+
+* HTML
+* CSS
+* Javascript
+* jQuery
+* Node.js
+* SASS
+
+### By Author
+
+Sowmya Dinavahi
+
 ### Support and contact details
-_contact info here_
+
+Contact me at sowmya.dsl@gmail.com
+
 ### License
 _MIT_
-Copyright (c) _year_ **Author or Organization**
 
+Copyright (c) _2017_ **Sowmya Dinavahi**
