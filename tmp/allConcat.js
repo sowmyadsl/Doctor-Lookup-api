@@ -23,8 +23,9 @@ var displayBio = function(bio){
 
 $(document).ready(function(){
   var currentDoctorObject = new Doctor();
-
+  $(".table").hide();
   $("#findDoc").submit(function(e){
+    $(".table").show();
     e.preventDefault();
 
     var medicalIssue = $('#medicalIssue').val();

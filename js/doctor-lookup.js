@@ -12,7 +12,7 @@ Doctor.prototype.getDoctors = function(medicalIssue,row, displayFirstName, displ
       displayFirstName(data.profile.first_name);
       displayLastName(data.profile.last_name);
       displayTitle(data.profile.title);
-      displayBio(data.profile.bio);
+      displayBio(data.profile.specialities.description);
 
       // $('.showDoctors').append("<li>" + data.profile.first_name + " " + data.profile.middle_name + " " + data.profile.last_name + " " + data.profile.title + " " + data.profile.bio + "</li>");
       console.log(result);
