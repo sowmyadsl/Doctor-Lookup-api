@@ -9,7 +9,7 @@
 This website on frontend lets the user input a medical issue and retrieve information and data from database API which contains a list of specialities and doctors. This site allows the user to find the doctors nearby to the location user is searching from.
 
 **Landing page**:
-![]()
+![](https://github.com/sowmyadsl/doctor-lookup/blob/master/img/Screen%20Shot%202017-05-26%20at%205.23.51%20PM.png)
 
 ## Specifications
 
