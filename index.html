@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="build/css/styles.css">
   <script src="build/js/vendor.min.js"></script>
   <script src="build/js/app.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
   <title>Doctor Lookup API</title>
 </head>
 <body>
@@ -14,15 +15,16 @@
     <img src= "img/doc-lookup.png" alt="logo" />
     <h1>Doctor Lookup API</h1>
   </div>
+  <hr>
 </div>
   <div class = "container">
     <div class = "row">
       <div class = "col-md-4">
         <h2>Find doctors in the Portland area to treat you!</h2>
         <form id="findDoc">
-          <label for="medicalIssue">Please Enter your Medical Issue:</label>
-          <input id="medicalIssue" type="text">
-          <button type="submit">Submit</button>
+          <label for="medicalIssue">Enter your Medical Issue:</label>
+          <input id="medicalIssue" type="text" required>
+          <button type="submit" class="btn btn-warning">Submit</button>
         </form>
       </div>
       <div class = "col-md-8">

@@ -63,11 +63,10 @@ $(document).ready(function(){
   $(".table").hide();
   $("#recommend").hide();
   $("#findDoc").submit(function(e){
+    e.preventDefault();
+    var medicalIssue = $('#medicalIssue').val();
     $("#recommend").show();
     $(".table").show();
-    e.preventDefault();
-
-    var medicalIssue = $('#medicalIssue').val();
     currentDoctorObject.getDoctors(medicalIssue,row, displayDocName, displayTitle, displaySpeciality, displayPracticeName,displayaddress);
   });
 });
