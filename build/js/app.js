@@ -69,6 +69,9 @@ $(document).ready(function(){
     $(".table").show();
     currentDoctorObject.getDoctors(medicalIssue,row, displayDocName, displayTitle, displaySpeciality, displayPracticeName,displayaddress);
   });
+  $('#refresh').click(function() {
+      location.reload();
+    });
 });
 
 },{"./../js/doctor-lookup.js":2}]},{},[3]);

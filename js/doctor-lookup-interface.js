@@ -36,4 +36,7 @@ $(document).ready(function(){
     $(".table").show();
     currentDoctorObject.getDoctors(medicalIssue,row, displayDocName, displayTitle, displaySpeciality, displayPracticeName,displayaddress);
   });
+  $('#refresh').click(function() {
+      location.reload();
+    });
 });
