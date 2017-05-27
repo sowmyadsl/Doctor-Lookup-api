@@ -16,7 +16,7 @@ This website on frontend lets the user input a medical issue and retrieve inform
 | behavior |  input   |  output  |
 |----------|:--------:|:--------:|
 |Program allows the user enter a medical issue and click on submit button  | "Pregnancy" | *List of doctors specializing on pregnancy* |
-|Program throws an error when the user tries to enter submit without entering anything in the form | *Please Fill out this field*|
+|Program throws an error when the user tries to enter submit without entering anything in the form |   | *Please Fill out this field*|
 
 ### Known Bugs
 
